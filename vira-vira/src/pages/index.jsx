@@ -6,7 +6,9 @@ import {
   Center,
   HStack,
   Stack,
-  useToast
+  Image,
+  useToast,
+  Heading
 } from "@chakra-ui/react";
 import { useReducer, useState } from 'react';
 import Piece from "../components/piece";
@@ -118,7 +120,7 @@ export default function Home() {
 
   return (
     <>
-      <Center h='100vh' minH='550px'>
+      <Center h='100vh' minH='550px' minW='600px'>
         <Stack>
           <HStack spacing={10}>
             <ReactCardFlip isFlipped={pieces[0] == 1} flipDirection="horizontal">
@@ -185,6 +187,17 @@ export default function Home() {
           </HStack>
         </Stack>
       </Center>
+      <HStack bg='#FFFBEA' justifyContent='center' padding={5} minW='600px'>
+          <Image src='./assets/logo.png' h='25vw' maxH='300px' borderRadius={'50%'}/>
+          <Stack color='gray.700' maxW='400px'>
+            <Heading size='md'>Como funciona?</Heading>
+            <Text>{'Para que seja possível resolver o problema, o círculo inicial (sendo n >= 3) precisa conter um número par de peças brancas.'}</Text>
+            <Text>{'Isso ocorre, logicamente, devido a propriedade de inversão do puzzle e sua redução progressiva. Uma configuração ímpar de peças brancas resulta em uma situação onde você não pode mais fazer movimentos válidos antes de todas as peças serem removidas.'}</Text>
+          </Stack>
+      </HStack>
+      <HStack bg='#F3ECCE' justifyContent='center' padding={3} minW='600px'>
+        <Text fontSize='sm' color='gray.800'>Equipe Dose Dupla | Skills Challenge | Desafio #1 | ITDP Development Committee</Text>
+      </HStack>
     </>
   )
 }

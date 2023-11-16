@@ -45,27 +45,11 @@ function turn(arr, pos) {
     return arr;
 }
 
-// var test = viraVira([0, 1, 1, 1, 0, 1], []);
-// var test2 = viraVira([0, 1, 1, 0], []);
-// //var test3 = viraVira([1,0,0,1,1,0,1,1,1,1,0,0,1,0,1,0,1,0,1,0,0,0,1,1,0,1,0,1,0,1,1,1,0,1,0,0,0,1,1,1,1,1,1,1,0,1,0,1,0], []);
-// // var input = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
-// //              1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
-// //              1,1,1,1];
-// var input = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,//0,0,0,0,0,0,
-//              //0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-//              //0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-//              //0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-//              //0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-//              0,1,0,0];
-// //input = [1,1,1,1,1,1,1,1,1,0];
-// var test3 = viraVira(input, []);
-// console.log('test', test);
-// console.log('test2', test2);
-// console.log('test3', test3);
+console.log(viraVira([0,0,1,1,0,1,0,0,1,0,0,1,1,0,1,0,0,0,0,0,0,1,0,0,1,1,1,0,1,0], []));
 
 function calcula(arr) {
     map = new Map();
-    if (arr.length > 15) return;
+    if (arr.length > 10) return;
 
     if (arr.length > 2)
         res.push({n: arr.length, brancas: arr.filter(x => x == 0).length, cinzas: arr.filter(x => x == 1).length, isPossible: !!viraVira(arr, []).length, initialState: arr.map(x => x == 1 ? 'C' : 'B')});
@@ -79,7 +63,4 @@ function calcula(arr) {
 let res = [];
 calcula([]);
 res.sort((a, b) => a.n - b.n).map(x => console.log(`n = ${x.n}`, `\t\tbrancas = ${x.brancas}`, `\tcinzas = ${x.cinzas}`, x.isPossible ? '\t\x1b[92mPOSSÍVEL\x1b[0m' : '\t\x1b[91mIMPOSSÍVEL\x1b[0m', `\t\t${x.initialState}`));
-//console.log(JSON.stringify({testedCases: res.length, possibleCases: res.filter(x => x.isPossible).length, impossibleCases: res.filter(x => !x.isPossible).length, cases: res.sort((a, b) => a.n - b.n)}, undefined, 2).replaceAll('",\n', '",').replaceAll('[\n        ', '[ ').replaceAll('\n      ]', ' ]').replaceAll('",        "', '", "'));
-
-console.log(res.filter(x => x.isPossible).length);
-console.log(res.filter(x => x.brancas % 2 == 0 && x.isPossible).length);
+// console.log(JSON.stringify({testedCases: res.length, possibleCases: res.filter(x => x.isPossible).length, impossibleCases: res.filter(x => !x.isPossible).length, cases: res.sort((a, b) => a.n - b.n)}, undefined, 2).replaceAll('",\n', '",').replaceAll('[\n        ', '[ ').replaceAll('\n      ]', ' ]').replaceAll('",        "', '", "'));

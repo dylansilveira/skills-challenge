@@ -13,7 +13,7 @@ export default function App({ Component, pageProps }) {
 
           <meta property="og:site_name" content="Dose Dupla" />
           <meta property="og:title" content="Vira-Vira | Skills Challenge" />
-          <meta property="og:description" content="Resolição do Desafio #1 do Skills Challenge pela equipe Dose Dupla" />
+          <meta property="og:description" content="Resolução do Desafio #1 do Skills Challenge pela equipe Dose Dupla" />
           <meta property="og:type" content="website" />
 
         </Head>

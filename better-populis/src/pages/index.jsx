@@ -37,7 +37,7 @@ export default function Home() {
           </HStack>
         </Container>
       </Box>
-      <Container color='gray.700' maxW='container.xl' minW='600px' h='calc(100vh - 120px)' minH='370px' maxH='800px'>
+      <Container color='gray.700' maxW='container.xl' minW='600px' h='calc(100vh - 120px)' minH='370px' maxH='850px'>
         <HStack justifyContent='center'>
           <Stack maxW='500px' p={3}>
             <SlideFade in={true} offsetY='100px'><Heading>
@@ -59,7 +59,7 @@ export default function Home() {
       </Box>
       <Container color='gray.700' maxW='container.lg' minW='600px'>
         <HStack justifyContent='center'>
-          <Image src='./assets/central_aprendizado.png' w='40vw'/>
+          <Image src='./assets/central_aprendizado.png' w='40vw' maxW='600px'/>
           <Stack maxW='500px' p={3}>
             <Heading>
               Central de Aprendizado
@@ -79,11 +79,11 @@ export default function Home() {
               Com a extensão BetterPopulis, você verá informações úteis para auxiliar no seu controle de marcações diretamente na interface do Populis. Saiba exatamente quanto tempo já trabalhou, o período restante, a hora esperada para a próxima marcação, e muito mais. É o fim das solicitações de reajuste!
             </Text>
           </Stack>
-          <Image src='./assets/controle_ponto.png' w='40vw'/>
+          <Image src='./assets/controle_ponto.png' w='40vw' maxW='600px'/>
         </HStack>
         <Divider/>
         <HStack justifyContent='center'>
-          <Image src='./assets/notificacao.png' w='40vw'/>
+          <Image src='./assets/notificacao.png' w='40vw' maxW='600px'/>
           <Stack maxW='500px' p={3}>
             <Heading>
               Notificações
